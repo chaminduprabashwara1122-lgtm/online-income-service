@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Online Income Learning Service</title>
+
+  <style>
+
+    body{
+      background:#111827;
+      color:white;
+      font-family:Arial;
+      text-align:center;
+      padding-top:40px;
+    }
+
+    img{
+      width:300px;
+      border-radius:20px;
+      margin-bottom:20px;
+    }
+
+    h1{
+      font-size:55px;
+      margin-bottom:10px;
+    }
+
+    p{
+      font-size:24px;
+      margin-bottom:20px;
+    }
+
+    h2{
+      color:#facc15;
+      font-size:35px;
+      margin-bottom:20px;
+    }
+
+    input{
+      width:320px;
+      padding:15px;
+      font-size:20px;
+      border-radius:10px;
+      border:none;
+      margin-top:15px;
+      text-align:center;
+    }
+
+    button{
+      background:#facc15;
+      color:black;
+      border:none;
+      padding:15px 40px;
+      font-size:25px;
+      border-radius:15px;
+      cursor:pointer;
+      margin-top:20px;
+    }
+
+    button:hover{
+      background:orange;
+    }
+
+    #pinSection{
+      display:none;
+      margin-top:30px;
+    }
+
+    #successSection{
+      display:none;
+      margin-top:30px;
+    }
+
+    .success{
+      color:#22c55e;
+      font-size:35px;
+      font-weight:bold;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <img src="bmw.jpg">
+
+  <h1>Online Income Learning Service</h1>
+
+  <p>
+    Learn online income methods and self employment ideas from home.
+  </p>
+
+  <h2>Rs.5 Per Day + Taxes</h2>
+
+  <p>
+    Enter your mobile number to subscribe.
+  </p>
+
+  <input type="text" id="number" placeholder="Enter Mobile Number">
+
+  <br>
+
+  <button onclick="sendPin()">Subscribe</button>
+
+  <div id="pinSection">
+
+    <p>Enter PIN Code</p>
+
+    <input type="text" id="pin" placeholder="Enter PIN">
+
+    <br>
+
+    <button onclick="confirmPin()">Confirm PIN</button>
+
+  </div>
+
+  <div id="successSection">
+
+    <p class="success">
+      Subscription Successful ??
+    </p>
+
+    <p>
+      Welcome to Online Income Learning Service
+    </p>
+
+    <button onclick="unsubscribe()">
+      Unsubscribe
+    </button>
+
+  </div>
+
+  <script>
+
+    function sendPin(){
+
+      var number =
+      document.getElementById("number").value;
+
+      if(number == ""){
+
+        alert("Please Enter Mobile Number");
+
+      }
+
+      else{
+
+        alert("PIN Code Sent To " + number);
+
+        document.getElementById("pinSection").style.display = "block";
+
+      }
+
+    }
+
+    function confirmPin(){
+
+      var pin =
+      document.getElementById("pin").value;
+
+      if(pin == ""){
+
+        alert("Please Enter PIN");
+
+      }
+
+      else{
+
+        document.getElementById("successSection").style.display = "block";
+
+        alert("Subscription Successful");
+
+      }
+
+    }
+
+    function unsubscribe(){
+
+      alert("You Have Unsubscribed");
+
+    }
+
+  </script>
+
+</body>
+
+</html>

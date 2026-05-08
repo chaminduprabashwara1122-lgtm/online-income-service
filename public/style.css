@@ -1,0 +1,54 @@
+body{
+    background:#111827;
+    color:white;
+    text-align:center;
+    font-family:Arial;
+    margin-top:60px;
+}
+
+img{
+    width:300px;
+    border-radius:20px;
+    box-shadow:0 0 20px orange;
+    animation:float 3s infinite ease-in-out;
+}
+
+h1{
+    font-size:55px;
+}
+
+p{
+    font-size:25px;
+}
+
+button{
+    background:orange;
+    color:black;
+    border:none;
+    padding:15px 40px;
+    font-size:25px;
+    border-radius:15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+    background:#ffcc00;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
