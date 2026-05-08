@@ -12,7 +12,12 @@
       color:white;
       font-family:Arial;
       text-align:center;
-      padding-top:40px;
+      padding:40px;
+    }
+
+    .container{
+      max-width:700px;
+      margin:auto;
     }
 
     img{
@@ -22,27 +27,28 @@
     }
 
     h1{
-      font-size:55px;
-      margin-bottom:10px;
+      font-size:50px;
+      margin-bottom:15px;
     }
 
     p{
-      font-size:24px;
-      margin-bottom:20px;
+      font-size:22px;
+      line-height:35px;
     }
 
     h2{
       color:#facc15;
-      font-size:35px;
-      margin-bottom:20px;
+      font-size:32px;
+      margin-top:20px;
     }
 
     input{
-      width:320px;
+      width:90%;
+      max-width:350px;
       padding:15px;
-      font-size:20px;
-      border-radius:10px;
+      font-size:18px;
       border:none;
+      border-radius:10px;
       margin-top:15px;
       text-align:center;
     }
@@ -52,7 +58,7 @@
       color:black;
       border:none;
       padding:15px 40px;
-      font-size:25px;
+      font-size:22px;
       border-radius:15px;
       cursor:pointer;
       margin-top:20px;
@@ -62,20 +68,23 @@
       background:orange;
     }
 
-    #pinSection{
-      display:none;
+    .box{
+      background:#1f2937;
+      padding:25px;
+      border-radius:20px;
       margin-top:30px;
     }
 
-    #successSection{
-      display:none;
-      margin-top:30px;
-    }
-
-    .success{
+    a{
       color:#22c55e;
-      font-size:35px;
-      font-weight:bold;
+      text-decoration:none;
+      font-size:22px;
+    }
+
+    footer{
+      margin-top:40px;
+      font-size:16px;
+      color:#9ca3af;
     }
 
   </style>
@@ -84,57 +93,79 @@
 
 <body>
 
-  <img src="bmw.jpg">
+  <div class="container">
 
-  <h1>Online Income Learning Service</h1>
+    <img src="bmw.jpg">
 
-  <p>
-    Learn online income methods and self employment ideas from home.
-  </p>
-
-  <h2>Rs.5 Per Day + Taxes</h2>
-
-  <p>
-    Enter your mobile number to subscribe.
-  </p>
-
-  <input type="text" id="number" placeholder="Enter Mobile Number">
-
-  <br>
-
-  <button onclick="sendPin()">Subscribe</button>
-
-  <div id="pinSection">
-
-    <p>Enter PIN Code</p>
-
-    <input type="text" id="pin" placeholder="Enter PIN">
-
-    <br>
-
-    <button onclick="confirmPin()">Confirm PIN</button>
-
-  </div>
-
-  <div id="successSection">
-
-    <p class="success">
-      Subscription Successful ??
-    </p>
+    <h1>Online Income Learning Service</h1>
 
     <p>
-      Welcome to Online Income Learning Service
+      Learn self-employment ideas, online income methods,
+      AI tools, digital business strategies and modern earning methods directly from your mobile phone.
     </p>
 
-    <button onclick="unsubscribe()">
-      Unsubscribe
-    </button>
+    <h2>Rs.5 Per Day + Taxes</h2>
+
+    <div class="box">
+
+      <p>
+        Enter your mobile number to subscribe.
+      </p>
+
+      <input type="text" id="number" placeholder="Enter Mobile Number">
+
+      <br>
+
+      <button onclick="subscribe()">
+        Subscribe
+      </button>
+
+    </div>
+
+    <div class="box">
+
+      <h2>WhatsApp Support</h2>
+
+      <a href="https://wa.me/94786513763" target="_blank">
+        Chat On WhatsApp
+      </a>
+
+    </div>
+
+    <div class="box">
+
+      <h2>Terms & Conditions</h2>
+
+      <p>
+        By subscribing to this service you agree to receive online income learning content.
+        Standard daily charges may apply.
+        Users can unsubscribe anytime.
+      </p>
+
+    </div>
+
+    <div class="box">
+
+      <h2>Privacy Policy</h2>
+
+      <p>
+        Mobile numbers submitted to this service are used only for service related communication
+        and subscription management.
+      </p>
+
+    </div>
+
+    <footer>
+
+      © 2026 Online Income Learning Service
+
+    </footer>
 
   </div>
 
   <script>
 
-    function sendPin(){
+    function subscribe(){
 
       var number =
       document.getElementById("number").value;
@@ -147,38 +178,9 @@
 
       else{
 
-        alert("PIN Code Sent To " + number);
-
-        document.getElementById("pinSection").style.display = "block";
+        alert("Subscription Request Sent Successfully");
 
       }
-
-    }
-
-    function confirmPin(){
-
-      var pin =
-      document.getElementById("pin").value;
-
-      if(pin == ""){
-
-        alert("Please Enter PIN");
-
-      }
-
-      else{
-
-        document.getElementById("successSection").style.display = "block";
-
-        alert("Subscription Successful");
-
-      }
-
-    }
-
-    function unsubscribe(){
-
-      alert("You Have Unsubscribed");
 
     }
 

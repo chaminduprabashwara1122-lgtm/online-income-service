@@ -52,3 +52,194 @@ button:hover{
     }
 
 }
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Online Income Learning Service</title>
+
+  <style>
+
+    body{
+      background:#111827;
+      color:white;
+      font-family:Arial;
+      text-align:center;
+      padding:40px;
+    }
+
+    .container{
+      max-width:700px;
+      margin:auto;
+    }
+
+    img{
+      width:300px;
+      border-radius:20px;
+      margin-bottom:20px;
+    }
+
+    h1{
+      font-size:50px;
+      margin-bottom:15px;
+    }
+
+    p{
+      font-size:22px;
+      line-height:35px;
+    }
+
+    h2{
+      color:#facc15;
+      font-size:32px;
+      margin-top:20px;
+    }
+
+    input{
+      width:90%;
+      max-width:350px;
+      padding:15px;
+      font-size:18px;
+      border:none;
+      border-radius:10px;
+      margin-top:15px;
+      text-align:center;
+    }
+
+    button{
+      background:#facc15;
+      color:black;
+      border:none;
+      padding:15px 40px;
+      font-size:22px;
+      border-radius:15px;
+      cursor:pointer;
+      margin-top:20px;
+    }
+
+    button:hover{
+      background:orange;
+    }
+
+    .box{
+      background:#1f2937;
+      padding:25px;
+      border-radius:20px;
+      margin-top:30px;
+    }
+
+    a{
+      color:#22c55e;
+      text-decoration:none;
+      font-size:22px;
+    }
+
+    footer{
+      margin-top:40px;
+      font-size:16px;
+      color:#9ca3af;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <img src="bmw.jpg">
+
+    <h1>Online Income Learning Service</h1>
+
+    <p>
+      Learn self-employment ideas, online income methods,
+      AI tools, digital business strategies and modern earning methods directly from your mobile phone.
+    </p>
+
+    <h2>Rs.5 Per Day + Taxes</h2>
+
+    <div class="box">
+
+      <p>
+        Enter your mobile number to subscribe.
+      </p>
+
+      <input type="text" id="number" placeholder="Enter Mobile Number">
+
+      <br>
+
+      <button onclick="subscribe()">
+        Subscribe
+      </button>
+
+    </div>
+
+    <div class="box">
+
+      <h2>WhatsApp Support</h2>
+
+      <a href="https://wa.me/94700000000" target="_blank">
+        Chat On WhatsApp
+      </a>
+
+    </div>
+
+    <div class="box">
+
+      <h2>Terms & Conditions</h2>
+
+      <p>
+        By subscribing to this service you agree to receive online income learning content.
+        Standard daily charges may apply.
+        Users can unsubscribe anytime.
+      </p>
+
+    </div>
+
+    <div class="box">
+
+      <h2>Privacy Policy</h2>
+
+      <p>
+        Mobile numbers submitted to this service are used only for service related communication
+        and subscription management.
+      </p>
+
+    </div>
+
+    <footer>
+
+      © 2026 Online Income Learning Service
+
+    </footer>
+
+  </div>
+
+  <script>
+
+    function subscribe(){
+
+      var number =
+      document.getElementById("number").value;
+
+      if(number == ""){
+
+        alert("Please Enter Mobile Number");
+
+      }
+
+      else{
+
+        alert("Subscription Request Sent Successfully");
+
+      }
+
+    }
+
+  </script>
+
+</body>
+
+</html>
